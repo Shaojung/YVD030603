@@ -10,12 +10,13 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Spinner spinner;
-    TextView tv;
+    TextView tv, tv2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tv = (TextView) findViewById(R.id.textView);
+        tv2 = (TextView) findViewById(R.id.textView2);
         spinner = (Spinner) findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -29,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+    }
+    public void click1(View v)
+    {
+        int poi = spinner.getSelectedItemPosition();
+        String[] f = getResources().getStringArray(R.array.fruits);
+        tv2.setText(f[poi]);
     }
 }
