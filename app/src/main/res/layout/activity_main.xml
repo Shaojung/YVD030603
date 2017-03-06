@@ -51,4 +51,24 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="21dp"
         android:id="@+id/spinner2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:layout_below="@+id/spinner2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="74dp"
+        android:id="@+id/editText" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:id="@+id/button2"
+        android:onClick="clickAdd" />
 </RelativeLayout>
